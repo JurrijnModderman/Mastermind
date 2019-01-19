@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="logic.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Mastermind</title>
+  </head>
+  <div class="modal">
+    <div class="modal-message">
+      <h2>Goed gedaan kutnoob!!</h2>
+      <h2>Je hebt gewonnen!!</h2>
+    </div>
+  </div>
+  <body>
+    <div class="board">
+      <div class="answer-container flexer">
+        <div class="answer-box">
+          <div class="answer"></div>
+        </div>
+        <div class="button-container">
+          <div class="submit-btn">
+            <h3 class="text">Controleren</h3>
+          </div>
+        </div>
+      </div>
+      <div class="guess-container">
+        <div class="guess-row flexer">
+          <div class="guess-pegs flexer">
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+          </div>
+          <div class="grade-pegs flexer">
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+          </div>
+        </div>
+        <div class="guess-row flexer">
+          <div class="guess-pegs flexer">
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+          </div>
+          <div class="grade-pegs flexer">
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+          </div>
+        </div>
+        <div class="guess-row flexer">
+          <div class="guess-pegs flexer">
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+          </div>
+          <div class="grade-pegs flexer">
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+          </div>
+        </div>
+        <div class="guess-row flexer">
+          <div class="guess-pegs flexer">
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+          </div>
+          <div class="grade-pegs flexer">
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+          </div>
+        </div>
+        <div class="guess-row flexer">
+          <div class="guess-pegs flexer">
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+          </div>
+          <div class="grade-pegs flexer">
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+          </div>
+        </div>
+        <div class="guess-row flexer">
+          <div class="guess-pegs flexer">
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+          </div>
+          <div class="grade-pegs flexer">
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+          </div>
+        </div>
+        <div class="guess-row flexer">
+          <div class="guess-pegs flexer">
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+          </div>
+          <div class="grade-pegs flexer">
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+          </div>
+        </div>
+        <div class="guess-row flexer">
+          <div class="guess-pegs flexer">
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+          </div>
+          <div class="grade-pegs flexer">
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+          </div>
+        </div>
+        <div class="guess-row flexer">
+          <div class="guess-pegs flexer">
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+            <div class="guess-peg"></div>
+          </div>
+          <div class="grade-pegs flexer">
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+          </div>
+        </div>
+        <div class="guess-row flexer">
+          <div class="guess-pegs flexer">
+            <div class="guess-peg active"></div>
+            <div class="guess-peg active"></div>
+            <div class="guess-peg active"></div>
+            <div class="guess-peg active"></div>
+          </div>
+          <div class="grade-pegs flexer first-grade">
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+            <div class="grade-peg"></div>
+          </div>
+        </div>
+      </div>
+      <div class="selection-container flexer">
+        <div class="selector-outer">
+          <div class="selector-inner red">
+          </div>
+        </div>
+        <div class="selector-outer">
+          <div class="selector-inner green">
+          </div>
+        </div>
+        <div class="selector-outer">
+          <div class="selector-inner yellow">
+          </div>
+        </div>
+        <div class="selector-outer">
+          <div class="selector-inner pink">
+          </div>
+        </div>
+        <div class="selector-outer">
+          <div class="selector-inner purple">
+          </div>
+        </div>
+        <div class="selector-outer">
+          <div class="selector-inner brown">
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
